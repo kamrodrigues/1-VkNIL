@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/VerVinis.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinis</title>
+</head>
+<body>
+
+<header class="generos">
+    <input type="button" value="clássica" class="btns-genero classica" onclick="Classica()">
+    <input type="button" value="MPB" class="btns-genero mpb" onclick="MPB()">
+    <input type="button" value="jazz" class="btns-genero jazz" onclick="Jazz()">
+    <input type="button" value="rock" class="btns-genero rock" onclick="Rock()">
+    <input type="button" value="samba" class="btns-genero samba" onclick="Samba()">
+
+    <div class="acoes">
+        <button id="btn-carrinho" class="btn-carrinho" onclick="abrirCarrinho()">
+            Ir para o carrinho (<span id="qtd-carrinho">0</span>)
+        </button>
+    </div>
+</header>
+
+<main id="lista-vinis"></main>
+
+<div id="toast" class="toast"></div>
+
+<div id="carrinho" class="carrinho">
+    <div class="carrinho-topo">
+        <h3>Carrinho</h3>
+        <button onclick="fecharCarrinho()">X</button>
+    </div>
+
+    <div id="itensCarrinho"></div>
+
+    <div class="carrinho-rodape">
+        <p id="totalCarrinho">Total: R$ 0,00</p>
+
+        <button class="esvaziar" onclick="esvaziarCarrinho()">
+            Esvaziar carrinho
+        </button>
+
+        <button class="finalizar" onclick="finalizarcompra()">
+            Finalizar compra
+        </button>
+    </div>
+</div>
+
+<script src="../js/api-config.js"></script>
+<script src="../js/VerVinis.js"></script>
+
+</body>
+</html>

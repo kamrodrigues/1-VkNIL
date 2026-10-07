@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Finalizar Compra</title>
+
+    <link rel="stylesheet" href="../css/FinalizarCompra.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>Finalizar Compra - VkNIL</h1>
+    </header>
+
+    <main>
+
+        <section id="resumo">
+            <h2>Resumo do Pedido</h2>
+
+            <div id="itens"></div>
+
+            <h3 id="total"></h3>
+        </section>
+
+        <section id="formulario">
+
+            <h2>Dados do Cliente</h2>
+
+            <input type="text" placeholder="Nome completo" id="nome">
+            <input type="text" placeholder="Endereço" id="endereco">
+
+            <h3>Pagamento</h3>
+
+            <label>
+                <input type="radio" name="pagamento" value="pix"> PIX
+            </label>
+
+            <label>
+                <input type="radio" name="pagamento" value="cartao"> Cartão
+            </label>
+
+            <label>
+                <input type="radio" name="pagamento" value="boleto"> Boleto
+            </label>
+
+            <button onclick="finalizarCompra()">Confirmar compra</button>
+
+            <p id="mensagem"></p>
+
+        </section>
+
+    </main>
+
+    <script src="../js/FinalizarCompra.js"></script>
+
+</body>
+</html>

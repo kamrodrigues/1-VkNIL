@@ -1,0 +1,116 @@
+header {
+    background-color: #ffffff;
+    padding: 10px 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid #001568;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.titulo-box {
+    text-align: center;
+}
+
+.titulo-box h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.titulo-box p {
+    margin: 5px 0 0;
+}
+
+#container-vinis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 250px));
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 80px;
+}
+
+.card-vinil {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    transition: .3s;
+}
+
+.card-vinil img {
+    width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.card-vinil:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 21, 104, 0.25);
+}
+
+.infos {
+    padding: 10px;
+}
+
+.card-vinil h2 {
+    margin-bottom: 10px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 24px;
+    color: #001568;
+}
+
+.artista {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 18px;
+}
+
+.preco {
+    color: #001568;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn-carrinho {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #001568;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-carrinho:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+}
+
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #001568;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: .3s;
+    z-index: 1000;
+}
+
+.toast.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}

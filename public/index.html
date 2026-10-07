@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VkNIL</title>
+    <link rel="stylesheet" href="css/Login.css">
+</head>
+<body>
+
+    <video autoplay loop muted playsinline id="bgVideo">
+        <source src="assets/video/loginfundo.mp4" type="video/mp4">
+    </video>
+
+
+        <main>
+
+            <label for="inputUser"> Usuário:</label>
+            <input type="text" id="inputUser">
+            <br><br>
+
+            <label for="inputSenha">Senha:</label>
+            <input type="password" id="inputSenha"> <br><br>
+
+            <input type="button" value="Entrar" id="botaoentrar" onclick="EntrarMenu()">
+            <br><br>
+
+            <h5>Não tem uma conta?</h5>
+            <input type="button" value="Cadastre-se" onclick="Cadastro()">
+
+        </main>
+</body>
+<script src="js/Login.js"></script>
+</html>

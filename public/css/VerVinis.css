@@ -1,0 +1,236 @@
+header {
+    background-color: #ffffff;
+    padding: 10px 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid #001568;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.generos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.btns-genero {
+    width: 260px;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    -webkit-text-stroke: 0.5px #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btns-genero:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 13px 13px rgba(0, 21, 104, 0.3);
+    filter: brightness(0.8);
+}
+
+.classica { background-image: url("../assets/img/classica.jpg"); }
+.mpb { background-image: url("../assets/img/mpb.jpg"); }
+.jazz { background-image: url("../assets/img/jazz.jpg"); }
+.samba { background-image: url("../assets/img/samba.jpg"); }
+.rock { background-image: url("../assets/img/rock.jpg"); }
+
+#lista-vinis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 250px));
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 80px;
+}
+
+.card-vinil {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    transition: .3s;
+}
+
+.card-vinil img {
+    width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.card-vinil:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 21, 104, 0.25);
+}
+
+.card-vinil h2 {
+    margin-bottom: 10px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 24px;
+    color: #001568;
+}
+
+.artista {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 18px;
+}
+
+.preco {
+    color: #001568;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.carrinho {
+    position: fixed;
+    top: 0;
+    right: -380px;
+    width: 350px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,.2);
+    transition: .4s;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.carrinho.aberto {
+    right: 0;
+}
+
+.carrinho-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.carrinho-topo button {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#itensCarrinho {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.carrinho-rodape {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.finalizar {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #001568;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.item-carrinho {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.item-carrinho img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-carrinho h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.item-carrinho p {
+    margin-top: 5px;
+    color: #001568;
+    font-weight: bold;
+}
+
+.esvaziar {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 2px solid #001568;
+    background: white;
+    color: #001568;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Josefin Sans", sans-serif;
+    transition: .3s;
+}
+
+.esvaziar:hover {
+    background: #001568;
+    color: white;
+}
+
+.btn-carrinho {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #001568;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-carrinho:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+}
+
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #001568;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: .3s;
+    z-index: 1000;
+}
+
+.toast.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}

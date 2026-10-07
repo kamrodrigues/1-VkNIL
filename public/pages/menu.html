@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menu</title>
+
+    <link rel="stylesheet" href="../css/Menu.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap" rel="stylesheet">
+</head>
+
+<body onload="carregarCriticos()">
+
+<header>
+    <img src="../assets/img/VkNIL.png" class="logo-VkNIL" onclick="VaiproMenu()" alt="Logo VkNIL">
+
+    <nav>
+        <label for="Genero">Gênero</label>
+        <select id="Genero" onchange="irParaGenero()">
+            <option value="">Escolha um gênero...</option>
+            <option value="Classica.html?genero=5">Clássica</option>
+            <option value="Rock.html?genero=1">Rock Internacional</option>
+            <option value="Rock.html?genero=2">Rock Nacional</option>
+            <option value="Jazz.html?genero=3">Jazz Internacional</option>
+            <option value="Jazz.html?genero=4">Jazz Nacional</option>
+            <option value="Samba.html?genero=7">Samba</option>
+            <option value="MPB.html?genero=6">MPB</option>
+        </select>
+
+        <button class="menu-btn" onclick="Vitrolas()">Vitrolas</button>
+    </nav>
+
+    <div class="acoes">
+        <img src="../assets/img/carrinho-imagem.png"
+             class="carrinho-imagem"
+             onclick="abrirCarrinho()"
+             alt="Carrinho">
+    </div>
+</header>
+
+<div id="carrinho" class="carrinho">
+
+    <div class="carrinho-topo">
+        <h2>Seu carrinho</h2>
+        <button onclick="fecharCarrinho()">✖</button>
+    </div>
+
+    <div id="itensCarrinho"></div>
+
+    <div class="carrinho-rodape">
+        <h3 id="totalCarrinho">Total: R$ 0,00</h3>
+
+        <button class="esvaziar" onclick="esvaziarCarrinho()">
+            Esvaziar carrinho
+        </button>
+
+        <button class="finalizar" onclick="finalizarcompra()">
+            Finalizar compra
+        </button>
+    </div>
+</div>
+
+<main>
+
+    <button class="ver-botao ver-vinis" onclick="VerVinis()">
+        Ver vinis
+    </button>
+
+    <br>
+
+    <button class="ver-botao ver-vitrolas" onclick="VerVitrolas()">
+        Ver vitrolas
+    </button>
+
+    <div class="slider">
+        <button class="prev" onclick="voltar()">‹</button>
+        <img id="slide" src="../assets/img/carrossel1.jpg" alt="vinil">
+        <button class="next" onclick="avancar()">›</button>
+    </div>
+
+    <section class="criticos-section">
+
+        <h2>
+            Consultamos alguns críticos renomados que recomendaram os seguintes vinis exclusivos:
+        </h2>
+
+        <table class="tabela-criticos">
+            <thead>
+                <tr>
+                    <th>Crítico</th>
+                    <th>Álbum</th>
+                    <th>Artista</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody id="lista-criticos">
+            </tbody>
+        </table>
+
+    </section>
+
+</main>
+
+<div id="toast" class="toast"></div>
+
+<footer>
+    Kamily da Silva Rodrigues
+</footer>
+
+<script src="../js/api-config.js"></script>
+<script src="../js/Menu.js"></script>
+
+</body>
+</html>
