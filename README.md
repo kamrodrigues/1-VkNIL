@@ -2,7 +2,7 @@
 
 ## 📌 Sobre o projeto
 
-O VkNIL é um projeto que consiste em uma curadoria de vinis desenvolvida como uma aplicação full stack, voltada para a exploração e organização de álbuns musicais em diferentes gêneros. A plataforma permite que o usuário navegue por categorias musicais, como jazz, rock e outros estilos e vitrolas, visualizando uma seleção de produtos exclusivos e organizados.
+O VkNIL é um projeto fictício que consiste em uma curadoria de vinis desenvolvida como uma aplicação full stack, voltada para a exploração e organização de álbuns musicais em diferentes gêneros. Este foi o primeiro projeto full stack que desenvolvi, realizado como um projeto escolar. A plataforma permite que o usuário navegue por categorias musicais, como jazz, rock e outros estilos e vitrolas, visualizando uma seleção de produtos exclusivos e organizados.
 
 Cada álbum apresentado contém informações detalhadas, incluindo nome do álbum, artista, capa, e preço, proporcionando uma experiência visual e informativa mais completa. Além disso, o sistema conta com funcionalidades de carrinho de compras, permitindo ao usuário adicionar e visualizar os itens selecionados de forma dinâmica.
 
